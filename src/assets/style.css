@@ -32,6 +32,14 @@ ol, ul {
     width: 34px;
 }
 
+.square.red {
+    background-color: red;
+}
+
+.square.grey {
+    background-color: grey;
+}
+
 .square:focus {
     outline: none;
 }
@@ -41,8 +49,8 @@ ol, ul {
 }
 
 .game {
-    display: flex;
-    flex-direction: row;
+    //display: flex;
+    //flex-direction: row;
 }
 
 .game-info {
