@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import Board from './Board';
 
-class Game extends Component {
+import OwnBoard from './OwnBoard';
+import RivalBoard from './RivalBoard';
+
+export default class Game extends Component {
     componentWillMount() {
 
     }
@@ -11,11 +12,11 @@ class Game extends Component {
         return (
             <div className="game">
                 <div className="game-board">
-                    <Board />
+                    <OwnBoard />
                 </div>
 
                 <div className="game-board">
-                    <Board />
+                    <RivalBoard />
                 </div>
                 <div className="game-info">
                     <div>{/* status */}</div>
@@ -25,9 +26,3 @@ class Game extends Component {
         );
     }
 }
-
-const mapStateToProps = state => {
-    state
-}
-
-export default connect(mapStateToProps(), null)(Game);

@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+
 import Square from './Square';
 import Repeat from './Repeat';
 
@@ -29,3 +30,4 @@ export default class Board extends Component {
         );
     }
 }
+
