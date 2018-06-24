@@ -6,7 +6,10 @@ import './assets/style.css';
 import Game from './Game';
 import GameApp from './reducers';
 
-const store = createStore(GameApp);
+const store = createStore(
+    GameApp,
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    );
 
 ReactDOM.render(
     <Provider store={store}>

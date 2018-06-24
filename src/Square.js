@@ -6,15 +6,15 @@ export default class Square extends Component {
         super(props);
         this.state = {};
     }
+
     handleClick = (e) => {
         this.setState({exposed: true});
-    }
+    };
 
     render() {
         const { has } = this.props;
         const name = has ? 'red' : 'grey';
-        const { exposed } = this.state;
-        const className = classNames('square', { [`${name}`]: exposed })
+        const className = classNames('square', name);
         return (
             <button className={className} onClick={this.handleClick}>
                 {/* TODO */}

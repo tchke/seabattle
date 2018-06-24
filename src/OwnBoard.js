@@ -3,8 +3,8 @@ import Board from "./Board";
 
 const mapStateToProps = (state) => {
     return {
-        state
+        boardMap: state.rivalBoard
     };
-}
+};
 
 export default connect(mapStateToProps)(Board);

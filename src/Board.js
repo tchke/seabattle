@@ -8,23 +8,25 @@ export default class Board extends Component {
         return <Square has={has}/>;
     }
 
-    renderVert(i) {
+    renderRow(i, rowMap) {
         return (
             <div className="board-row">
                 <Repeat>
-                    { (k) => this.renderSquare(k) }
+                    { (k) => this.renderSquare(k, rowMap[k].occupied) }
                 </Repeat>
             </div>
         );
     }
 
     render() {
+        const { boardMap } = this.props;
+
         const status = 'Next player: X';
         return (
             <div>
                 <div className="status">{status}</div>
                 <Repeat>
-                    { (i) => this.renderVert(i) }
+                    { (i) => this.renderRow(i, boardMap[i]) }
                 </Repeat>
             </div>
         );
