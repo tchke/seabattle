@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import Board from './Board';
 
-export default class Game extends Component {
+class Game extends Component {
+    componentWillMount() {
+
+    }
+
     render() {
         return (
             <div className="game">
@@ -20,3 +25,9 @@ export default class Game extends Component {
         );
     }
 }
+
+const mapStateToProps = state => {
+    state
+}
+
+export default connect(mapStateToProps(), null)(Game);
