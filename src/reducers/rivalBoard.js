@@ -17,7 +17,8 @@ function initState(boardMap){
     return boardMap.map((g) => {
         return g.map((v) => {
             return {
-                occupied: !!v
+                occupied: !!v,
+                open: false
             }
         });
     });

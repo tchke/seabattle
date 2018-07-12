@@ -4,8 +4,8 @@ import Square from './Square';
 import Repeat from './Repeat';
 
 export default class Board extends Component {
-    renderSquare(i, has = false) {
-        return <Square has={has}/>;
+    renderSquare(i, has = false, open = false) {
+        return <Square has={has} open={open}/>;
     }
 
     renderRow(i, rowMap) {
