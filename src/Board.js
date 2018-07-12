@@ -4,15 +4,17 @@ import Square from './Square';
 import Repeat from './Repeat';
 
 export default class Board extends Component {
-    renderSquare(i, has = false, open = false) {
-        return <Square has={has} open={open}/>;
+    renderSquare(i, j, has = false, open = false) {
+        const { onSquareClick } = this.props;
+        
+        return <Square has={has} open={open} onClick={ () => onSquareClick(i,j) }/>;
     }
 
-    renderRow(i, rowMap) {
+    renderRow(r, rowMap) {
         return (
             <div className="board-row">
                 <Repeat>
-                    { (k) => this.renderSquare(k, rowMap[k].occupied) }
+                    { (k) => this.renderSquare(r, k, rowMap[k].occupied) }
                 </Repeat>
             </div>
         );
