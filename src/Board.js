@@ -14,7 +14,7 @@ export default class Board extends Component {
         return (
             <div className="board-row">
                 <Repeat>
-                    { (k) => this.renderSquare(r, k, rowMap[k].occupied) }
+                    { (k) => this.renderSquare(r, k, rowMap[k].occupied, rowMap[k].open) }
                 </Repeat>
             </div>
         );

@@ -40,6 +40,10 @@ ol, ul {
     background-color: grey;
 }
 
+.square.white {
+    background-color: white;
+}
+
 .square:focus {
     outline: none;
 }

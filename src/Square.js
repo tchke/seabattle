@@ -10,7 +10,7 @@ export default class Square extends Component {
 
     render() {
         const { has, open, onClick } = this.props;
-        const name = open && has ? 'red' : 'grey';
+        const name = open ? has ? 'red' : 'white' : 'grey';
         const className = classNames('square', name);
         return (
             <button className={className} onClick={this.handleClick}>
