@@ -1,5 +1,5 @@
 import React from 'react';
-import Square from '../Square';
+import Square from '../components/Square';
 import renderer from 'react-test-renderer';
 
 it('empty square should be rendered correctly', () => {

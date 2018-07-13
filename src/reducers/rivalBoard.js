@@ -1,5 +1,5 @@
 import { handleActions } from 'redux-actions'
-import { REVEAL_SQUARE } from '../actionTypes';
+import { REVEAL_SQUARE } from '../actions/actionTypes';
 
 function getBoardMap(){
     return [

@@ -1,13 +1,12 @@
 import { connect } from 'react-redux';
-import Board from "./Board";
-import { revealSquare } from './actions';
+import Board from "../components/Board";
+import {revealSquare} from "../actions/actions";
 
 const mapStateToProps = (state) => {
     return {
         boardMap: state.rivalBoard
     };
 };
-
 const mapDispatchToProps = (dispatch) => {
     return {
         onSquareClick: (i, j) => {
@@ -16,4 +15,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Board);
+export default connect(mapStateToProps,mapDispatchToProps)(Board);
