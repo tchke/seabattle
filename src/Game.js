@@ -4,10 +4,6 @@ import OwnBoard from './OwnBoard';
 import RivalBoard from './RivalBoard';
 
 export default class Game extends Component {
-    componentWillMount() {
-
-    }
-
     render() {
         return (
             <div className="game">

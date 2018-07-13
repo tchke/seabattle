@@ -5,9 +5,17 @@ import Repeat from './Repeat';
 
 export default class Board extends Component {
     renderSquare(i, j, has = false, open = false) {
+        return <Square
+            has={has}
+            open={open}
+            i={i}
+            j={j}
+            onClick={ this.handleSquareClick }/>;
+    }
+
+    handleSquareClick = (i,j) => {
         const { onSquareClick } = this.props;
-        
-        return <Square has={has} open={open} onClick={ () => onSquareClick(i,j) }/>;
+        onSquareClick(i,j);
     }
 
     renderRow(r, rowMap) {
@@ -21,12 +29,11 @@ export default class Board extends Component {
     }
 
     render() {
-        const { boardMap } = this.props;
+        const { boardMap, title } = this.props;
 
-        const status = 'Next player: X';
         return (
             <div>
-                <div className="status">{status}</div>
+                { title && <div className="status">{title}</div> }
                 <Repeat>
                     { (i) => this.renderRow(i, boardMap[i]) }
                 </Repeat>

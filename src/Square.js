@@ -3,13 +3,13 @@ import classNames from 'classnames';
 
 export default class Square extends Component {
     handleClick = () => {
-        const { onClick } = this.props;
-        console.log('clicked');
-        onClick();
+        const { onClick, i, j } = this.props;
+        console.log(`clicked on ${i} ${j}`);
+        onClick(i,j);
     }
 
     render() {
-        const { has, open, onClick } = this.props;
+        const { has, open } = this.props;
         const name = open ? has ? 'red' : 'white' : 'grey';
         const className = classNames('square', name);
         return (
