@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`empty square should be rendered correctly 1`] = `
+<button
+  className="square grey"
+  onClick={[Function]}
+/>
+`;
+
+exports[`occupied square should be rendered correctly 1`] = `
+<button
+  className="square grey"
+  onClick={[Function]}
+/>
+`;
+
+exports[`open empty square should be rendered correctly 1`] = `
+<button
+  className="square white"
+  onClick={[Function]}
+/>
+`;
+
+exports[`open occupied square should be rendered correctly 1`] = `
+<button
+  className="square red"
+  onClick={[Function]}
+/>
+`;
