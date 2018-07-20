@@ -36,8 +36,8 @@ export default handleActions({
             const nextState = state.map((g, gi) => {
                 return g.map((v, vi) => {
                     return {
-                        occupied: vi === gi,
-                        open: v.open || gi === i && vi === j
+                        ...v,
+                        open: v.open || gi === i && vi === j                        
                     }
                 });
             });
