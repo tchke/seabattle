@@ -2,4 +2,4 @@ import { createAction } from 'redux-actions';
 
 import { REVEAL_SQUARE } from './actionTypes';
 
-export const revealSquare = createAction(REVEAL_SQUARE, (i,j) => ({i,j}));
+export const revealSquare = createAction(REVEAL_SQUARE, (i,j, boardName) => ({i, j, boardName}));

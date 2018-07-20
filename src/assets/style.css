@@ -53,8 +53,11 @@ ol, ul {
 }
 
 .game {
-    //display: flex;
-    //flex-direction: row;
+
+}
+
+.dashboard {
+    float: left;
 }
 
 .game-info {
